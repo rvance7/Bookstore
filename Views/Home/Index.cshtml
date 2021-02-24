@@ -2,17 +2,22 @@
     ViewData["Title"] = "Online Bookstore";
 }
 
-@model IQueryable<Book>
-
+@model BookListViewModel
+<!--Displays the information on each page about the books in the database-->
 <div class="text-center">
-    <h1 class="display-4">Online Bookstore</h1>
-    <p>Look for the book you need with ease.</p>
+    <h1 class="display-4"><strong>Online Bookstore</strong></h1>
+    <!--<p class="lead">Look for the book you need with ease.</p>-->
+    <blockquote class="blockquote">
+        <p class="mb-0">A book is a gift you can open again and again.</p>
+        <footer class="blockquote-footer">Garrison Keillor</footer>
+    </blockquote>
+
 </div>
 
 
 <div class="text-center">
-    <table class="table-dark table-striped table-bordered" style="margin-left:auto; margin-right:auto">
-        <thead>
+    <table class="table-hover table-dark table-bordered" style="margin-left:auto; margin-right:auto">
+        <thead class="table-primary">
             <tr>
                 <th>&nbsp; Title &nbsp;</th>
                 <th>&nbsp; Author Name &nbsp;</th>
@@ -21,11 +26,12 @@
                 <th>&nbsp; Classification &nbsp;</th>
                 <th>&nbsp; Category &nbsp;</th>
                 <th>&nbsp; Price &nbsp;</th>
+                <th>&nbsp; Number of Pages &nbsp;</th>
             </tr>
         </thead>
 
         <tbody>
-            @foreach (var x in Model)
+            @foreach (var x in Model.Books)
             {
                 <tr>
                     <td>@x.Title</td>
@@ -35,8 +41,13 @@
                     <td>@x.Classification</td>
                     <td>@x.Category</td>
                     <td>$@x.Price</td>
+                    <td>@x.NumberPages</td>
                 </tr>
             }
         </tbody>
     </table>  
-</div>
+</div><br />
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class ="btn"
+     page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary"
+     class="btn-group pull-right m-1"></div>
