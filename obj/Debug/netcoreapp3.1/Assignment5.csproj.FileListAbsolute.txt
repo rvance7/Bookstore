@@ -65,3 +65,5 @@
 /Users/rachelvance/Projects/Assignment5/Assignment5/obj/Debug/netcoreapp3.1/Assignment5.dll
 /Users/rachelvance/Projects/Assignment5/Assignment5/obj/Debug/netcoreapp3.1/Assignment5.pdb
 /Users/rachelvance/Projects/Assignment5/Assignment5/obj/Debug/netcoreapp3.1/Assignment5.genruntimeconfig.cache
+/Users/rachelvance/Projects/Assignment5/Assignment5/obj/Debug/netcoreapp3.1/Razor/Views/Shared/BookSummary.cshtml.g.cs
+/Users/rachelvance/Projects/Assignment5/Assignment5/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Components/NavigationMenu/Default.cshtml.g.cs

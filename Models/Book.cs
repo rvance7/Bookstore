@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
+//model used for book entries
 namespace Assignment5.Models
 {
     public class Book

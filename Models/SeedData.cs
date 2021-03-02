@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
+//seed data used to populate information for book table
 namespace Assignment5.Models
 {
     public class SeedData

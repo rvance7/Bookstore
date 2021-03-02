@@ -14,7 +14,6 @@
 
 </div>
 
-
 <div class="text-center">
     <table class="table-hover table-dark table-bordered" style="margin-left:auto; margin-right:auto">
         <thead class="table-primary">
@@ -33,21 +32,15 @@
         <tbody>
             @foreach (var x in Model.Books)
             {
-                <tr>
-                    <td>@x.Title</td>
-                    <td>@(x.AuthorFirstName + " " + x.AuthorMiddleInitial + " " + x.AuthorLastName)</td>
-                    <td>@x.Publisher</td>
-                    <td>@x.ISBN</td>
-                    <td>@x.Classification</td>
-                    <td>@x.Category</td>
-                    <td>$@x.Price</td>
-                    <td>@x.NumberPages</td>
-                </tr>
+                <partial name="BookSummary" model="x" />
             }
         </tbody>
-    </table>  
-</div><br />
-<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class ="btn"
+    </table>
+</div>
+<br />
+
+<br />
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
      page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary"
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
      class="btn-group pull-right m-1"></div>

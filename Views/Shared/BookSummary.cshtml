@@ -1,0 +1,12 @@
+﻿@model Book
+<!--can display books 1 by 1-->
+<tr>
+    <td>@Model.Title</td>
+    <td>@(Model.AuthorFirstName + " " + Model.AuthorMiddleInitial + " " + Model.AuthorLastName)</td>
+    <td>@Model.Publisher</td>
+    <td>@Model.ISBN</td>
+    <td>@Model.Classification</td>
+    <td>@Model.Category</td>
+    <td>$@Model.Price</td>
+    <td>@Model.NumberPages</td>
+</tr>
