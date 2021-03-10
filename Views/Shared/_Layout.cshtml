@@ -7,39 +7,51 @@
     <title>@ViewData["Title"] - Online Bookstore</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 <body>
-    <header>
+    <!--<header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Online Bookstore</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
+                    <vc:cart-summary />
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button>-->
                 <!-- <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
 
-            </ul>
-        </div> -->
-            </div>
+                    </ul>
+                </div> -->
+            <!--</div>
         </nav>
-    </header>
+    </header>-->
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">Online Bookstore</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row m-1 p-1">
-        <div class="col-3">
+        <div class="col-2">
             <h4>Search by Category</h4>
             <vc:navigation-menu />
         </div>
-        <div class="col-9">
+        <div class="col-10">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
     </div>
-    
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
